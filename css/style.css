@@ -1,0 +1,22 @@
+:root {
+    --color1: #1cc9c9;
+    --color2: #ac63c7;
+    --color3: #1f1f1f;
+}
+
+
+
+/*
+Так как это комментарий. Тут надо создать классы для аголовков, подтекстов и прочег очтобы потом синхронизировать с текстом
+Также надо будет разобраться с шрифтами ;)
+
+header{
+    padding: 200px 0;
+}
+
+footer, header {
+    background: var(--color1);
+    background: -webkit-linear-gradient(top left, var(--color1), var(--color2));
+    background: -moz-linear-gradient(top left, var(--color1), var(--color2));
+    background: linear-gradient(to bottom right, var(--color1), var(--color2));
+}
