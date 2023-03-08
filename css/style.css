@@ -1,22 +1,64 @@
-:root {
-    --color1: #1cc9c9;
-    --color2: #ac63c7;
-    --color3: #1f1f1f;
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
 }
 
-
-
-/*
-Так как это комментарий. Тут надо создать классы для аголовков, подтекстов и прочег очтобы потом синхронизировать с текстом
-Также надо будет разобраться с шрифтами ;)
-
-header{
-    padding: 200px 0;
+.container {
+    max-width: 810;
 }
 
-footer, header {
-    background: var(--color1);
-    background: -webkit-linear-gradient(top left, var(--color1), var(--color2));
-    background: -moz-linear-gradient(top left, var(--color1), var(--color2));
-    background: linear-gradient(to bottom right, var(--color1), var(--color2));
+.sighttitle {
+    height: 810px;
+    background-image: url(/img/title.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.fonttittle {
+    color: #fff;
+    position: absolute;
+    width: 364px;
+    height: 206px;
+    left: 122px;
+    top: 170px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 170px;
+    line-height: 199px;
+}
+
+.podfonttittle {
+    color: #fff;
+    position: absolute;
+    width: 560px;
+    height: 29px;
+    left: 122px;
+    top: 361px;
+    
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+}
+
+.autoriz {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-size: 30px;
+    position: absolute;
+    width: 200px;
+    height: 60px;
+    left: 122px;
+    top: 430px;
+}
+
+.info {
+    position: absolute;
+    width: 1000px;
+    height: 650px;
+    left: 233px;
+    top: 640px;
 }
