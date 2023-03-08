@@ -86,9 +86,11 @@ body {
 
 #square {
     position: absolute;
+    top: 630px;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%);
     width: 1020px;
     height: 670px;
-    left: 223px;
-    top: 630px;
     background: #02E6C0;
 }
