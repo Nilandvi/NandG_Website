@@ -56,10 +56,12 @@ body {
 
 .info {
     position: absolute;
+    top: 640px;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%);
     width: 1000px;
     height: 650px;
-    left: 233px;
-    top: 640px;
 }
 
 .shapka {
