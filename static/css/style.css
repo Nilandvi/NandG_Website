@@ -10,7 +10,6 @@ body {
 
 .sighttitle {
     height: 810px;
-    background-image: url(/img/title.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -61,4 +60,33 @@ body {
     height: 650px;
     left: 233px;
     top: 640px;
+}
+
+.shapka {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-size: 70px;
+    color: white;
+}
+
+.shapkatitle {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-size: 40px;
+    color: aquamarine;
+}
+
+.shapkatext {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-size: 30px;
+}
+
+#square {
+    position: absolute;
+    width: 1020px;
+    height: 670px;
+    left: 223px;
+    top: 630px;
+    background: #02E6C0;
 }
