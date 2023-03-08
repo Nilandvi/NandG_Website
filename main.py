@@ -5,7 +5,7 @@ app = Flask(__name__)
 @app.route('/')
 @app.route('/index')
 def index():
-    return render_template("init.html", title="Jinja and Flask")
+    return render_template("index.html", title="Jinja and Flask")
 
 @app.route('/')
 @app.route('/form', methods=['POST', 'GET'])
@@ -82,7 +82,10 @@ def form_sample():
         print(request.form['sex'])
         return "Форма отправлена"
 
-
+@app.route('/')
+@app.route('/autorization')
+def autorization():
+    return 'В разработке....'
 
 
 if __name__ == '__main__':
