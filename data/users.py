@@ -17,3 +17,7 @@ class User(SqlAlchemyBase):
     created_date = sqlalchemy.Column(sqlalchemy.DateTime,
                                      default=datetime.datetime.now)
     news = orm.relationship("News", back_populates='user')
+
+    def __init__(self, name, about):
+        self.name = name
+        self.about = about
