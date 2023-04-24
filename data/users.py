@@ -9,6 +9,7 @@ class User(SqlAlchemyBase):
 
     id = sqlalchemy.Column(sqlalchemy.Integer,
                            primary_key=True, autoincrement=True)
+    nickname = sqlalchemy.Column(sqlalchemy.String, nullable=True)
     name = sqlalchemy.Column(sqlalchemy.String, nullable=True)
     about = sqlalchemy.Column(sqlalchemy.String, nullable=True)
     email = sqlalchemy.Column(sqlalchemy.String,
@@ -18,6 +19,7 @@ class User(SqlAlchemyBase):
                                      default=datetime.datetime.now)
     news = orm.relationship("News", back_populates='user')
 
-    def __init__(self, name, about):
-        self.name = name
-        self.about = about
+    #def __init__(self, name, about):
+    #    self.name = name
+    #    self.about = about
+    
