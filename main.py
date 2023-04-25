@@ -24,9 +24,7 @@ class LoginForm(FlaskForm):
 class NoteForm(FlaskForm):
     title = StringField('Заголовок', validators=[DataRequired(), Length(max=255)])
     content = TextAreaField('Контент', validators=[DataRequired()])
-    created_at = DateField('Дата создания', validators=[DataRequired()])
-    user_id = IntegerField('ID пользователя', validators=[DataRequired(), NumberRange(min=1)])
-    deadline = DateField('Дедлайн', validators=[Optional()])
+    deathline = StringField('Дедлайн', validators=[Optional()])
 
 def register(nickname, name, about, mail, password):
     db_session.global_init("db/blogs.db")
@@ -51,6 +49,8 @@ def index():
 @app.route('/')
 @app.route('/autorization', methods=['POST', 'GET'])
 def autorization_form_sample():
+    db_session.global_init("db/blogs.db")
+    session = db_session.create_session()
     if request.method == 'GET':
       return render_template("autorization.html", title="Jinja and Flask")
     elif request.method == 'POST':
@@ -65,6 +65,7 @@ def registration():
       return render_template("registration.html", title="Jinja and Flask")
     elif request.method == 'POST':
         register(request.form['nickname'], request.form['name'], request.form['about'], request.form['mail'], request.form['password'])
+        print(request.form['nickname'], request.form['name'], request.form['about'], request.form['mail'], request.form['password'])
         print(request.form['nickname'], request.form['name'], request.form['about'], request.form['mail'], request.form['password'])
         return redirect((url_for('autorization_form_sample')))
 

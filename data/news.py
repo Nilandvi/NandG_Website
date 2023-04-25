@@ -17,3 +17,4 @@ class Note(SqlAlchemyBase):
     user_id = sqlalchemy.Column(sqlalchemy.Integer,
                                 sqlalchemy.ForeignKey("users.id"))
     deathline = sqlalchemy.Column(sqlalchemy.String, nullable=True)
+    user = orm.relationship('User')
